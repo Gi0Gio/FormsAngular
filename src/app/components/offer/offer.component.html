@@ -1,0 +1,68 @@
+<div>
+    <div class="m-auto flex items-center justify-between my-6 bg-[#2e3132] w-[25%] p-5 rounded-xl">
+      <form [formGroup]="offerForm" (ngSubmit)="onSubmit()" class="max-w-md mx-auto">
+        <div class="relative z-0 w-full mb-5 group">
+            <input formControlName="titulo" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#296a5c] peer" placeholder="" required />
+            <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-[#296a5c] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Titulo</label>
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+            <input formControlName="descripcion" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#296a5c] peer" placeholder="" required />
+            <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-[#296a5c] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Descripción</label>
+        </div>
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="relative z-0 w-full mb-5 group">
+            <input formControlName="tipo" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#296a5c] peer" placeholder=" " required />
+            <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#296a5c] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Tipo</label>
+          </div>
+          <div class="relative z-0 w-full mb-5 group">
+            <input formControlName="direccion" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#296a5c] peer" placeholder=" " required />
+            <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#296a5c] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Dirección</label>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="relative z-0 w-full mb-5 group">
+            <input formControlName="horas" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#296a5c] peer" placeholder=" " required />
+            <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#296a5c] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Horas
+            </label>
+          </div>
+          <div class="relative z-0 w-full mb-5 group">
+            <input formControlName="lugar" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#296a5c] peer" placeholder=" " required />
+            <label for="floating_company" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#296a5c] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Lugar</label>
+          </div>
+        </div>
+        <button type="submit" class="text-white bg-[#296a5c] hover:bg-[#65a8a2] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+        Agregar</button>
+        <button type="button" (click)="onUpdate()" *ngIf="currentOfferId" class="text-white ml-4 bg-[#296a5c] hover:bg-[#65a8a2] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Actualizar</button>
+      </form>
+    </div>
+  
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+        <thead class="text-lg text-[#65a8a2] uppercase bg-[#2e3132]">
+          <tr>
+            <th scope="col" class="px-6 py-3">Titulo</th>
+            <th scope="col" class="px-6 py-3">Tipo</th>
+            <th scope="col" class="px-6 py-3">Descripción</th>
+            <th scope="col" class="px-6 py-3">Horas</th>
+            <th scope="col" class="px-6 py-3">Lugar</th>
+            <th scope="col" class="px-6 py-3">Dirección</th>
+            <th scope="col" class="px-6 py-3"><span class="sr-only">Edit</span></th>
+            <th scope="col" class="px-6 py-3"><span class="sr-only">Delete</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let offer of offer" class="bg-[#4f5253] border-b text-lg text-white hover:bg-[#65a8a2] hover:text-black">
+            <th scope="row" class="px-6 py-4 text-white font-bold whitespace-nowrap ">{{ offer.titulo }}</th>
+            <td class="px-6 py-4">{{ offer.tipo }}</td>
+            <td class="px-6 py-4">{{ offer.descripcion }}</td>
+            <td class="px-6 py-4">{{ offer.horas }}</td>
+            <td class="px-6 py-4">{{ offer.lugar }}</td>
+            <td class="px-6 py-4">{{ offer.direccion }}</td>
+            <td class="px-6 py-4 text-right"><button (click)="onEdit(offer)" class="font-bold text-2xl text-blue-600 dark:text-blue-500 hover:underline">Edit</button></td>
+            <td class="px-6 py-4 text-right"><button (click)="onDelete(offer.id!)" class="font-bold text-2xl text-red-600 dark:text-red-500 hover:underline">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
