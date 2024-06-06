@@ -6,4 +6,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Is for an University activity, and aims to show how a form works in angular
 
-#Just for practice
+# Just for practice
